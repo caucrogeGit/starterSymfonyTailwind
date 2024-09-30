@@ -11,18 +11,9 @@ use Symfony\Component\HttpFoundation\Request;
 class PostController extends AbstractController{
 
     #[Route('/', name: 'post.index', methods: ['GET'])]
-    public function index(PostRepository $postRepository, 
-                          PaginatorInterface $paginator,
-                          Request $request): Response
-    {
-        $datas = $postRepository->findPublished();
-        $posts = $paginator->paginate(
-            $datas,
-            $request->query->getInt('page', 1),
-            9
-        );
-
+    public function index(PostRepository $postRepository)
+    {   
         return $this->render('pages/blog/index.html.twig',
-        ['posts' => $posts]);
+        ['posts' => $postRepository->findPublished()]);
     }
 }
