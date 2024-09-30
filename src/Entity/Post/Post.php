@@ -52,7 +52,7 @@ class Post
 
     // Relation
     #[ORM\OneToOne(inversedBy: 'post', targetEntity: Thumbnail::class, cascade: ['persist', 'remove'])]
-    private Thumbnail $thumbnail; 
+    private ?Thumbnail $thumbnail = null; 
 
     // Constructeur
     public function __construct()
@@ -152,7 +152,7 @@ class Post
         return $this;
     }
 
-    public function getThumbnail(): Thumbnail
+    public function getThumbnail(): ?Thumbnail
     {
         return $this->thumbnail;
     }

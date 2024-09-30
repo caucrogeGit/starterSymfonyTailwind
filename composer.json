@@ -46,6 +46,7 @@
         "symfony/yaml": "7.1.*",
         "symfonycasts/tailwind-bundle": "^0.6.0",
         "twig/extra-bundle": "^2.12|^3.0",
+        "twig/string-extra": "^3.13",
         "twig/twig": "^2.12|^3.0",
         "vich/uploader-bundle": "^2.4"
     },
@@ -88,7 +89,8 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "tailwind:watch": "php bin/console tailwind:build --watch"
     },
     "conflict": {
         "symfony/symfony": "*"
