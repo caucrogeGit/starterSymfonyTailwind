@@ -1,10 +1,22 @@
 import './bootstrap.js';
 /*
- * Welcome to your app's main JavaScript file!
+ * Bienvenue dans le fichier JavaScript principal de votre application !
  *
- * This file will be included onto the page via the importmap() Twig function,
- * which should already be in your base.html.twig.
+ * Ce fichier sera inclus dans la page via la fonction Twig importmap(),
+ * qui devrait déjà être présente dans votre fichier base.html.twig.
  */
 import './styles/app.css';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+// Importation du fichier duck.js
+import Duck from './duck.js';
+const duck = new Duck('Waddles');
+duck.quack();
+
+console.log('Ce message vient de assets/app.js - bienvenue dans AssetMapper !🎉');
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+
+hljs.registerLanguage('javascript', javascript);
+hljs.highlightAll();
+
+
