@@ -25,4 +25,11 @@ return [
     '@hotwired/turbo' => [
         'version' => '7.3.0',
     ],
+    'tw-elements' => [
+        'version' => '2.0.0',
+    ],
+    'tw-elements/css/tw-elements.min.css' => [
+        'version' => '2.0.0',
+        'type' => 'css',
+    ],
 ];
