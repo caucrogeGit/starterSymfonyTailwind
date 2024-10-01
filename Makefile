@@ -212,6 +212,8 @@ mvo: ## make:voter - Crée un voter de sécurité pour restreindre les accès.
 	$(SYMFONY_CONSOLE) make:voter 
 mw: ## make:webhook - Crée un point d’entrée pour recevoir des webhooks externes.
 	$(SYMFONY_CONSOLE) make:webhook
+test:
+	php bin/phpunit
 
 ## Messenger
 mcon: ## messenger:consume - Lance les workers pour traiter les messages en file d'attente dans les transports configurés.
