@@ -8,7 +8,7 @@ knp_paginator:
         filter_field_name: filterField  # nom du paramètre de requête pour le champ de filtrage
         filter_value_name: filterValue  # nom du paramètre de requête pour la valeur de filtrage
     template:
-        pagination: '@KnpPaginator/Pagination/sliding.html.twig'     # modèle pour les contrôles de pagination glissants
+        pagination: 'components/_pagination.html.twig'     # modèle pour les contrôles de pagination glissants
         rel_links: '@KnpPaginator/Pagination/rel_links.html.twig'    # modèle pour les balises <link rel=...>
         sortable: '@KnpPaginator/Pagination/sortable_link.html.twig' # modèle pour les liens de tri
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # modèle pour les filtres
